@@ -1,0 +1,324 @@
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-family: Gotham_Pro, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1030px;
+  margin: 0 70px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 115px;
+}
+
+/* .logo {
+  padding-top: 0px;
+} */
+
+.logo__image {
+  width: 55px;
+  height: 52px;
+  background: url(img/Axion-logo-1.jpg) no-repeat;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.menu__item {
+  padding-right: 35px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__item:nth-child(5) {
+  padding-right: 192px;
+}
+
+.menu__item:nth-child(8) {
+  padding-right: 39px;
+}
+
+.search-form {
+  padding: 2px 36px 0 0;
+  position: relative;
+}
+
+.search-form__search {
+  width: 174px;
+  height: 22px;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+
+.search-form__button {
+  position: absolute;
+  border: none;
+  width: 14px;
+  height: 14px;
+  transform: translate(-16px, 6px);
+  background: url(img/find.svg);
+}
+
+.menu__item_number::after {
+  content: "1";
+  position: absolute;
+  left: 6px;
+  top: -2px;
+  color: #fff;
+}
+
+.menu__item_number {
+  display: inline-block;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: translate(5px, 2px);
+  background-color: #000;
+}
+
+.menu__item_lang {
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+
+.menu__item-lang-eng {
+  width: 100%;
+  height: 100%;
+  background: url(img/united-states.svg) no-repeat;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+  height: 280px;
+  background: url(img/rob-potter.jpg) 100% 100% / cover no-repeat;
+}
+
+.banner-title {
+  margin: 0;
+  padding: 12px 0 17px 60px;
+  width: 195px;
+  height: 87px;
+  font-size: 30px;
+  line-height: 29px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.banner-link {
+  padding-left: 60px;
+  font-size: 12px;
+  line-height: 11px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.links-item {
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  left: 3px;
+  width: 43px;
+  height: 1px;
+  background-color: #fff;
+}
+
+.links-item::before,
+.links-item::after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 1px;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.links-item::before {
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+
+.links-item::after {
+  transform: rotate(-45deg);
+  transform-origin: right;
+}
+
+@media (max-width: 1169px) {
+  .wrapper {
+    max-width: 930px;
+    margin: 0 47px;
+  }
+
+  .header {
+    margin-bottom: 14px;
+  }
+
+  .logo__image {
+    margin-right: 35px;
+  }
+
+  .menu__item:nth-child(5) {
+    padding-right: 140px;
+  }
+
+  .menu__item:nth-child(7) {
+    padding-right: 27px;
+  }
+
+  .menu__item:nth-child(8) {
+    padding-right: 29px;
+  }
+
+  .search-form {
+    padding-right: 30px;
+  }
+
+  .search-form__search {
+    width: 160px;
+    height: 22px;
+  }
+
+  .banner {
+    height: 253px;
+  }
+
+  .banner-title {
+    padding: 6px 0 9px 55px;
+  }
+
+  .banner-link {
+    padding-left: 55px;
+  }
+
+  .links-item {
+    top: -2px;
+    left: 8px;
+    width: 46px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    margin: 0;
+    max-width: 768px;
+  }
+
+  .header {
+    margin: 0 44px;
+    height: 113px;
+  }
+
+  .logo__image {
+    width: 156px;
+    height: 34px;
+    background: url(img/Axion-logo.jpg) 0 0 / cover no-repeat;
+  }
+
+  .burger-menu {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .burger-menu__item {
+    position: relative;
+    width: 60px;
+    height: 9px;
+    background-color: #000;
+    transform: translate(0px, -5px);
+  }
+
+  .burger-menu__item::after {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 9px;
+    background-color: #000;
+    transform: translate(0px, 16px);
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    width: 100%;
+    height: 415px;
+    background: url(img/rob-potter.jpg) 17% 0 / cover no-repeat;
+  }
+
+  .banner-title {
+    padding: 39px 0 24px 45px;
+    width: 355px;
+    height: 168px;
+    font-size: 50px;
+    line-height: 47px;
+  }
+
+  .banner-link {
+    padding-left: 45px;
+    font-size: 20px;
+    line-height: 19px;
+  }
+
+  .links-item {
+    top: -6px;
+    left: 5px;
+    width: 70px;
+  }
+
+  .links-item::before,
+  .links-item::after {
+    width: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    max-width: 375px;
+  }
+
+  .header {
+    margin: 0 48px;
+    height: 72px;
+  }
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    max-width: 320px;
+  }
+
+  .header {
+    margin: 0 20px;
+  }
+}
