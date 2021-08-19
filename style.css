@@ -1,6 +1,7 @@
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   padding: 0;
   font-family: Gotham_Pro, Verdana, sans-serif;
@@ -13,6 +14,7 @@ body.lock {
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-self: center;
   max-width: 1030px;
   margin: 0 70px;
 }
@@ -164,7 +166,7 @@ body.lock {
   height: 1px;
   right: 0;
   top: 0;
-  background-color: #fff;
+  background-color: inherit;
 }
 
 .links-item::before {
@@ -302,6 +304,7 @@ body.lock {
 }
 
 .video {
+  margin-bottom: 59px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -330,6 +333,7 @@ body.lock {
   height: 96%;
   z-index: 10;
 }
+
 .video-image {
   width: 100%;
   height: auto;
@@ -373,10 +377,12 @@ body.lock {
   text-transform: uppercase;
   font: 22px/28px Gotham_Pro_Medium;
 }
+
 .text-content__description {
   margin: 0 0 16px 0;
   font: 14px/17px Gotham_Pro_Light;
 }
+
 .text-content__link {
   color: #fff;
   font: 12px/12px Gotham_Pro_Medium;
@@ -386,6 +392,198 @@ body.lock {
 
 .text-content__link .links-item {
   padding-left: 1px;
+}
+
+.stories {
+  margin-bottom: 79px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stories-title {
+  margin-bottom: 43px;
+  align-self: center;
+  text-transform: uppercase;
+  font: 22px/22px Gotham_Pro_Bold;
+}
+
+.stories-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stories-item {
+  max-width: 307px;
+}
+
+.stories__img {
+  width: 100%;
+  height: 147px;
+  object-fit: cover;
+  margin-bottom: 28px;
+}
+
+.stories-item__subtitle {
+  margin: 0 0 9px 0;
+  font: 18px/18px Gotham_Pro_Bold;
+}
+
+.stories-item__text {
+  margin: 0 0 17px 0;
+  font: 14px/17px Gotham_Pro;
+}
+
+.stories-item__addition {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+
+.stories-item__link {
+  text-transform: uppercase;
+  font: 12px/12px Gotham_Pro_Bold;
+  text-decoration: none;
+  color: inherit;
+}
+
+.stories-item__link .links-item {
+  width: 28px;
+  left: 6px;
+  background-color: #000;
+}
+
+.stories-item__date {
+  font: 12px/12px Gotham_Pro_Bold;
+  opacity: 0.3;
+  text-align: end;
+}
+
+.photo-gallery {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-gallery__title {
+  margin: 0 0 11px 0;
+  align-self: flex-end;
+  font: 18px/17px Gotham_Pro_Bold;
+  text-transform: uppercase;
+  opacity: 0.3;
+}
+
+.photo-gallery__photos {
+  display: flex;
+  justify-content: start;
+}
+
+.photo {
+  width: 147px;
+  height: 147px;
+  border: none;
+  box-shadow: none;
+}
+
+.photo:nth-child(1n + 8) {
+  display: none;
+}
+
+.footer {
+  width: 100%;
+  height: 296px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font: 12px/11px Gotham_Pro;
+}
+
+.footer__container {
+  margin: 68px 0 40px 0;
+  padding-left: 10px;
+  width: 780px;
+  display: flex;
+}
+
+.footer-item {
+  margin-right: 20px;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-item:last-child {
+  margin-right: 0;
+  height: 100%;
+}
+
+.footer-item__title {
+  margin: 0 0 12px 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav__link {
+  margin-bottom: 7px;
+}
+
+.footer-item:last-child .footer-nav__link:nth-child(2) {
+  margin-bottom: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 135px;
+  height: 27px;
+  border: 1px solid #fff;
+}
+
+.footer-item:last-child .footer-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.footer-item:last-child .footer-nav__link:last-child {
+  margin-bottom: 5px;
+  justify-self: end;
+}
+
+.footer-nav__button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.footer-icons {
+  padding: 0;
+  display: flex;
+  width: 136px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footer-item:last-child .footer-item__title {
+  margin-bottom: 8px;
+}
+
+.twitter .footer-icon__img {
+  position: relative;
+  left: 0;
+  top: 3px;
+}
+
+.footer__copyright {
+  padding-right: 3px;
+  align-self: center;
 }
 
 @media (max-width: 1169px) {
@@ -484,6 +682,7 @@ body.lock {
   }
 
   .video {
+    margin-bottom: 73px;
     height: 442px;
   }
 
@@ -518,6 +717,38 @@ body.lock {
   .text-content__description {
     margin-bottom: 12px;
     font: 13px/16px Gotham_Pro_Light;
+  }
+
+  .stories {
+    margin-bottom: 89px;
+  }
+
+  .stories-item {
+    max-width: 277px;
+  }
+
+  .stories__img {
+    object-fit: fill;
+  }
+
+  .stories-item__text {
+    margin-bottom: 24px;
+    font: 13px/16px Gotham_Pro;
+  }
+
+  .stories-item__link .links-item {
+    width: 25px;
+    left: -3px;
+    top: -3px;
+  }
+
+  .photo-gallery {
+    margin-bottom: 94px;
+  }
+
+  .photo {
+    width: 133px;
+    height: 133px;
   }
 }
 
@@ -703,18 +934,18 @@ body.lock {
   }
 
   .video {
-    margin: 0 4.5vw;
+    margin: 0 4.5vw 79px 4.5vw;
     position: relative;
     flex-direction: column;
     width: auto;
-    height: 72vw;
+    height: auto;
   }
 
   .background {
     position: absolute;
     display: block;
     width: 1300px;
-    height: 1576px;
+    height: 1680px;
     left: -100px;
     top: -20px;
     transform: rotate(2.6deg);
@@ -737,10 +968,12 @@ body.lock {
   }
 
   .text-content__title {
+    margin: 27px 0 7px 0;
     font: 30px/56px Gotham_Pro_Medium;
   }
 
   .text-content__description {
+    margin-bottom: 31px;
     max-width: 685px;
     font: 20px/25px Gotham_Pro_Light;
   }
@@ -753,6 +986,182 @@ body.lock {
     padding: 20px 0;
     color: #fff;
     font-size: 20px;
+  }
+
+  .stories {
+    margin: 0 44px 126px 44px;
+  }
+
+  .stories-title {
+    margin-bottom: 44px;
+    font: 30px/30px Gotham_Pro_Bold;
+    color: #fff;
+  }
+
+  .stories-container {
+    justify-content: space-around;
+  }
+
+  .stories-item {
+    max-width: 312px;
+  }
+
+  .stories-item:first-child {
+    margin-right: 56px;
+  }
+
+  .stories-item:last-child {
+    display: none;
+  }
+
+  .stories__img {
+    height: 165px;
+  }
+
+  .stories-item__subtitle {
+    font: 25px/25px Gotham_Pro_Bold;
+    color: #fff;
+  }
+
+  .stories-item__text {
+    margin-bottom: 35px;
+    font: 20px/25px Gotham_Pro;
+    color: #fff;
+  }
+
+  .stories-item__addition {
+    color: #fff;
+  }
+
+  .stories-item__link {
+    font: 20px/19px Gotham_Pro_Bold;
+  }
+
+  .stories-item__link .links-item {
+    width: 47px;
+    left: 8px;
+    top: -5px;
+    background-color: #fff;
+  }
+
+  .stories-item__date {
+    font: 15px/15px Gotham_Pro_Bold;
+  }
+
+  .stories-item:first-child .stories-item__date {
+    transform: translate(20px, 0px);
+  }
+
+  .photo-gallery {
+    margin: 0 44px 125px 44px;
+  }
+
+  .photo-gallery__photos {
+    width: 680px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .photo-gallery__title {
+    align-self: center;
+    text-align: end;
+    width: 680px;
+    margin-bottom: 13px;
+    font: 30px/30px Gotham_Pro_Bold;
+    color: #e8e8e8;
+    opacity: 1;
+  }
+
+  .photo {
+    width: 170px;
+    height: 170px;
+  }
+
+  .photo:nth-child(1n + 8) {
+    display: block;
+  }
+
+  .footer__container {
+    margin: 57px 0 60px 0;
+    padding: 0;
+    width: 682px;
+    justify-content: space-between;
+  }
+
+  .footer-item:first-child {
+    padding-left: 9px;
+  }
+
+  .footer-item {
+    margin-right: 0px;
+    width: auto;
+  }
+
+  .footer-item:nth-child(3) {
+    margin-left: 10px;
+  }
+
+  .footer-item:last-child {
+    margin-left: 14px;
+  }
+
+  .footer-item:last-child .footer-nav {
+    width: 154px;
+  }
+
+  .footer-item:last-child .footer-nav__link:nth-child(2) {
+    width: 140px;
+    height: 24px;
+  }
+
+  .footer-item__title {
+    margin-bottom: 9px;
+  }
+
+  .footer-item:last-child .footer-item__title {
+    margin-bottom: 6px;
+  }
+
+  .footer-item:last-child .footer-nav__link:nth-child(2) {
+    margin-bottom: 23px;
+  }
+
+  .footer-nav__link {
+    text-align: justify;
+  }
+
+  .footer-item:last-child .footer-nav__link:last-child {
+    margin-bottom: 2px;
+  }
+
+  .footer-icons {
+    width: 118px;
+  }
+
+  .footer-icon__img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .facebook .footer-icon__img {
+    position: relative;
+    left: -5px;
+    top: -2px;
+  }
+
+  .twitter .footer-icon__img {
+    left: -6px;
+    top: -1px;
+  }
+
+  .instagram .footer-icon__img {
+    position: relative;
+    left: -4px;
+    top: -2px;
+  }
+
+  .footer__copyright {
+    padding-right: 0px;
   }
 }
 
@@ -828,17 +1237,12 @@ body.lock {
     order: 4;
   }
 
-  .text-content__title {
-    margin: 27px 0 7px 0;
-  }
-
-  .text-content__description {
-    margin-bottom: 27px;
-  }
-
   .video {
     width: auto;
-    height: 650px;
+  }
+
+  .background {
+    height: 1576px;
   }
 
   .video-content__play {
@@ -945,6 +1349,10 @@ body.lock {
     height: 2vw;
   }
 
+  .background {
+    height: 1450px;
+  }
+
   .text-content__title {
     font-size: 20px;
     line-height: 25px;
@@ -954,6 +1362,168 @@ body.lock {
     max-width: 480px;
     font-size: 14px;
     line-height: 17px;
+  }
+
+  .stories-item:first-child {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .stories-item:nth-child(2) {
+    margin-right: 0;
+    display: none;
+  }
+
+  .photo-gallery {
+    margin-bottom: 85px;
+  }
+
+  .photo-gallery__photos {
+    width: 420px;
+  }
+
+  .photo-gallery__title {
+    align-self: center;
+    text-align: end;
+    width: 420px;
+    font: 25px/24px Gotham_Pro_Bold;
+  }
+
+  .photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .photo:nth-child(1n + 8) {
+    display: none;
+  }
+
+  .photo-1 {
+    order: 1;
+  }
+
+  .photo-2 {
+    order: 2;
+  }
+
+  .photo-3 {
+    order: 6;
+  }
+
+  .photo-4,
+  .photo-8 {
+    display: none;
+  }
+
+  .photo-5 {
+    order: 5;
+  }
+
+  .photo-6 {
+    order: 3;
+  }
+
+  .photo-7 {
+    order: 4;
+  }
+
+  .footer {
+    height: 898px;
+  }
+
+  .footer__container {
+    margin: 38px 0 0 0;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .footer-item,
+  .footer-item:first-child,
+  .footer-item:nth-child(3),
+  .footer-item:last-child {
+    margin: 0 0 40px 0;
+    padding: 0;
+    align-items: center;
+  }
+
+  .footer-item:first-child {
+    order: 1;
+  }
+
+  .footer-item:nth-child(2) {
+    order: 3;
+  }
+
+  .footer-item:nth-child(3) {
+    order: 2;
+  }
+
+  .footer-item:last-child {
+    margin-bottom: 10px;
+    order: 4;
+  }
+
+  .footer-item__title {
+    margin-bottom: 5px;
+    font-size: 15px;
+    line-height: 14px;
+  }
+
+  .footer-item:last-child .footer-nav {
+    width: 165px;
+  }
+
+  .footer-item:first-child .footer-nav__link {
+    margin-bottom: 10px;
+  }
+
+  .footer-item:last-child .footer-item__title {
+    margin-bottom: 11px;
+  }
+
+  .footer-nav__link {
+    margin-bottom: 7px;
+    align-self: center;
+    text-align: center;
+    font: 15px/14px Gotham_Pro_Light;
+  }
+
+  .footer-item:last-child .footer-nav__link:nth-child(2) {
+    margin: 14px 0 105px 0;
+    width: 149px;
+    height: 37px;
+  }
+
+  .footer-nav__button {
+    font: 12px/12px Gotham_Pro_Medium;
+  }
+
+  .footer-icons {
+    width: 168px;
+  }
+
+  .footer-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-icon__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .facebook .footer-icon__img {
+    left: -7px;
+    top: -3px;
+  }
+
+  .twitter .footer-icon__img {
+    left: -8px;
+    top: -1px;
+  }
+
+  .footer__copyright {
+    font: 13px/13px Gotham_Pro_Light;
   }
 }
 
@@ -1017,11 +1587,11 @@ body.lock {
 
   .video {
     margin: 0 45px;
-    height: 480px;
   }
 
   .background {
     top: -14px;
+    height: 1200px;
   }
 
   .text-content {
@@ -1041,6 +1611,14 @@ body.lock {
     line-height: 17px;
   }
 
+  .video {
+    margin-bottom: 81px;
+  }
+
+  .background {
+    height: 1252px;
+  }
+
   .video-content__play {
     width: 21px;
     height: 21px;
@@ -1052,6 +1630,53 @@ body.lock {
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
     border-left: 4px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .stories {
+    margin: 0 48px 100px 48px;
+  }
+
+  .stories-title {
+    margin-bottom: 27px;
+    font: 20px/20px Gotham_Pro_Bold;
+  }
+
+  .stories__img {
+    width: 100%;
+    height: 147px;
+    margin-bottom: 28px;
+  }
+
+  .stories-item__subtitle {
+    font: 20px/20px Gotham_Pro_Bold;
+  }
+
+  .stories-item__text {
+    margin-bottom: 27px;
+    font: 14px/17px Gotham_Pro;
+  }
+
+  .stories-item__link {
+    font: 12px/12px Gotham_Pro_Bold;
+  }
+
+  .stories-item__link .links-item {
+    width: 39px;
+    left: 9px;
+    top: -4px;
+  }
+
+  .stories-item:first-child .stories-item__date {
+    transform: translate(0px, 0px);
+  }
+
+  .photo-gallery__photos {
+    width: 280px;
+  }
+
+  .photo-gallery__title {
+    margin-bottom: 11px;
+    width: 255px;
   }
 }
 
@@ -1068,6 +1693,7 @@ body.lock {
   .banner-link {
     padding-left: 20px;
   }
+
   .slider {
     margin: 0 20px;
   }
@@ -1085,7 +1711,15 @@ body.lock {
   }
 
   .video {
-    margin: 0 20px;
+    margin: 0 20px 85px 20px;
+  }
+
+  .stories {
+    margin: 0 20px 100px 20px;
+  }
+
+  .footer {
+    width: 98%;
   }
 }
 
