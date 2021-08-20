@@ -871,6 +871,14 @@ body.lock {
     border-left: 8px solid rgba(0, 0, 0, 0.5);
   }
 
+  .video-content__play:hover::after {
+    left: 18px;
+    top: 17px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid rgba(0, 0, 0, 0.5);
+  }
+
   .text-content {
     margin: 9px;
     padding-bottom: 4px;
@@ -1498,6 +1506,14 @@ body.lock {
   }
 
   .video-content__play::after {
+    left: 22px;
+    top: 20px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 12px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .video-content__play:hover:after {
     left: 22px;
     top: 20px;
     border-top: 6px solid transparent;
