@@ -7,14 +7,6 @@
 }
 
 @font-face {
-  font-family: "Gotham_Pro_Black";
-  src: url("fonts/GothamPro-Black.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Gotham_Pro_Bold";
   src: url("fonts/GothamPro-Bold.woff") format("woff");
   font-weight: normal;
